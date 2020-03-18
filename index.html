@@ -326,8 +326,11 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+            <script src="assets/js/ajaxUtil.js"></script>
 	<script>
 		$(document).ready(()=>{
+		    const API_Server = new URL("http://localhost:8080/")
+
 			const $buttonSet = $(".button-set button")
 
             //Register 메뉴 버튼 이벤트, 버튼에 맞는 div 표시와 선택된 버튼 색상 변경
@@ -336,6 +339,7 @@
 				const targetId = $(e.target).css({"background-color": "white", "color": "black","font-weight" :"bold"}).attr("target-id")
                 $(".fields").each( (index, item) => item.style.display = item.getAttribute("id") === targetId ? "flex": "none")
 			})
+
 		})
 	</script>
 

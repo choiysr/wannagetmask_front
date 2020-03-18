@@ -9,3 +9,14 @@
 
 //const url = new URL("http://localhost:8080/")
 //getAjax(url, data, success) => getAjax(url.set("getList"), data, success)
+
+
+class URL {
+    constructor(basicURL) {
+        this.basicURL = basicURL
+    }
+
+    get(value) {
+        return this.basicURL + value
+    }
+}
