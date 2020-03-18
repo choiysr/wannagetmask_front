@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dab2ba67-f9c7-4ef0-995c-6e6a90585414" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/css/custom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/ajaxUtil.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/ajaxUtil.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="dab2ba67-f9c7-4ef0-995c-6e6a90585414" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +60,7 @@
       <option name="presentableId" value="Default" />
       <updated>1584195278945</updated>
       <workItem from="1584195281554" duration="2276000" />
-      <workItem from="1584511192466" duration="6412000" />
+      <workItem from="1584511192466" duration="6568000" />
     </task>
     <task id="LOCAL-00001" summary="change template">
       <created>1584195340720</created>
@@ -102,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584515075690</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add ajaxutil">
+      <created>1584518982647</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584518982647</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,6 +125,7 @@
     <MESSAGE value="change template" />
     <MESSAGE value="add btn function" />
     <MESSAGE value="merge test" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge test" />
+    <MESSAGE value="add ajaxutil" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ajaxutil" />
   </component>
 </project>
