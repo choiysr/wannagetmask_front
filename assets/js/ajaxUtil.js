@@ -11,7 +11,7 @@
 //getAjax(url, data, success) => getAjax(url.set("getList"), data, success)
 
 
-var ajaxService = (function () {
+const ajaxService = (function () {
 
     function getAjax(url, data, success, fail) {
         excuteAjax("GET", url, data, success, fail);
@@ -29,24 +29,29 @@ var ajaxService = (function () {
         excuteAjax("PUT", url, data, success, fail);
     }
 
-    return {
-        getAjax: getAjax,
-        postAjax: postAjax,
-        deleteAjax: deleteAjax,
-        putAjax: putAjax
-    };
+    function excuteAjax(type, url, data, success, fail) {
+        $.ajax({
+            type: type,
+            url: url,
+            data: JSON.stringify(data),
+            contentType: 'application/json',
+            dataType: 'json',
+            success: success,
+            fail: fail
+        })
+    }
 
+    return {getAjax, postAjax, deleteAjax, putAjax};
 })();
 
-function excuteAjax(type, url, data, success, fail) {
-    $.ajax({
-        type: type,
-        url: url,
-        data: JSON.stringify(data),
-        contentType: 'application/json',
-        dataType: 'json'
-    }).done(function (datas) {
-        // 나중에 로그인 로직
-        success(datas);
-    })
+
+
+class URL {
+    constructor(basicURL) {
+        this.basicURL = basicURL
+    }
+
+    get(value) {
+        return this.basicURL + value
+    }
 }

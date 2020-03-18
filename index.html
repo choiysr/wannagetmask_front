@@ -255,20 +255,6 @@
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/ajaxUtil.js"></script>
 	<script>
-
-
-		function getClikedList(menu) {
-
-			console.log(menu);
-			let pno = 1;
-			ajaxService.getAjax("http://localhost:8080/getTargetList",pno,success)
-			function success(data) {
-				console.log(data);
-			}
-
-		}
-
-
 		$(document).ready(()=>{
 		    const API_Server = new URL("http://localhost:8080/")
 
@@ -290,7 +276,6 @@
 					console.log(data);
 				}
 			})
-
 
 		})
 	</script>
