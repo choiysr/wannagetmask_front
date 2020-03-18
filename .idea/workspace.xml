@@ -2,14 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dab2ba67-f9c7-4ef0-995c-6e6a90585414" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/ajaxUtil.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +62,7 @@
       <updated>1584195278945</updated>
       <workItem from="1584195281554" duration="1040000" />
       <workItem from="1584285749562" duration="2276000" />
-      <workItem from="1584511177037" duration="2610000" />
+      <workItem from="1584511177037" duration="3242000" />
     </task>
     <task id="LOCAL-00001" summary="change template">
       <created>1584195340720</created>
@@ -72,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584513910298</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Register 버튼 초기화면 수정">
+      <created>1584514281175</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584514281175</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -94,6 +107,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="change template" />
     <MESSAGE value="Register 버튼 클릭 시 화면 변경 이벤트 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="Register 버튼 클릭 시 화면 변경 이벤트 추가" />
+    <MESSAGE value="Register 버튼 초기화면 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="Register 버튼 초기화면 수정" />
   </component>
 </project>
