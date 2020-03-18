@@ -9,3 +9,44 @@
 
 //const url = new URL("http://localhost:8080/")
 //getAjax(url, data, success) => getAjax(url.set("getList"), data, success)
+
+
+var ajaxService = (function () {
+
+    function getAjax(url, data, success, fail) {
+        excuteAjax("GET", url, data, success, fail);
+    }
+
+    function postAjax(url, data, success, fail) {
+        excuteAjax("POST", url, data, success, fail);
+    }
+
+    function deleteAjax(url, data, success, fail) {
+        excuteAjax("DELETE", url, data, success, fail);
+    }
+
+    function putAjax(url, data, success, fail) {
+        excuteAjax("PUT", url, data, success, fail);
+    }
+
+    return {
+        getAjax: getAjax,
+        postAjax: postAjax,
+        deleteAjax: deleteAjax,
+        putAjax: putAjax
+    };
+
+})();
+
+function excuteAjax(type, url, data, success, fail) {
+    $.ajax({
+        type: type,
+        url: url,
+        data: JSON.stringify(data),
+        contentType: 'application/json',
+        dataType: 'json'
+    }).done(function (datas) {
+        // 나중에 로그인 로직
+        success(datas);
+    })
+}

@@ -1,0 +1,70 @@
+/*한글폰트 import*/
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.ns {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+.table{
+    text-align: center;
+}
+.menu3 p{
+    width: 30%;
+    display: inline-block;
+    margin-bottom: 1vh;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.menu4 p{
+    width: 20%;
+    display: inline-block;
+    margin-bottom: 1vh;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+.table-title{
+    font-weight: bold;
+    margin-bottom: 0vh;
+}
+.description-header{
+    margin-bottom: 5vh;
+}
+.description-header h2{
+    font-size: 2em;
+    display: inline;
+}
+.description-header span{
+    color: lightgray;
+}
+.button-set{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+.button-set button{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+.button-commit{
+    float: right;
+    width: 100%;
+    font-size: 1em;
+    margin: 0 0 2rem 0;
+}
+hr {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* 'X' button for resetting/clearing time */
+input[type=time]::-webkit-clear-button {
+    background-color: white;
+}
+
+/*Up/Down arrows for incrementing/decrementing the value*/
+input[type=time]::-webkit-inner-spin-button {
+    display: none;
+}

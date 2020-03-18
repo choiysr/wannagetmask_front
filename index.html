@@ -10,87 +10,12 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<!--ON/OFF토글버튼-->
 		<link rel="stylesheet" href="assets/css/toggle.css">
-
-		<style>
-			/*한글폰트 import*/
-			@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-			.ns {
-				font-family: 'Noto Sans KR', sans-serif;
-			}
-			.table{
-				text-align: center;
-			}
-			.menu3 p{
-				width: 30%;
-				display: inline-block;
-				margin-bottom: 1vh;
-				overflow:hidden;
-				text-overflow:ellipsis;
-				white-space:nowrap;
-			}
-			.menu4 p{
-				width: 20%;
-				display: inline-block;
-				margin-bottom: 1vh;
-				overflow:hidden;
-				text-overflow:ellipsis;
-				white-space:nowrap;
-			}
-			.table-title{
-				font-weight: bold;
-				margin-bottom: 0vh;
-			}
-			.description-header{
-				margin-bottom: 5vh;
-			}
-			.description-header h2{
-				font-size: 2em;
-				display: inline;
-			}
-			.description-header span{
-				color: lightgray;
-			}
-			.button-set{
-				text-align: center;
-				align-content: center;
-				align-items: center;
-				margin-bottom: 5vh;
-			}
-			.button-set button{
-				margin-left: 1vw;
-				margin-right: 1vw;
-			}
-			.button-commit{
-				float: right;
-				width: 100%;
-				font-size: 1em;
-				margin: 0 0 2rem 0;
-			}
-			hr {
-				text-align: center;
-				margin-top: 10px;
-				margin-bottom: 10px;
-			}
-
-
-			/* 'X' button for resetting/clearing time */
-			input[type=time]::-webkit-clear-button {
-				background-color: white;
-			}
-
-			 /*Up/Down arrows for incrementing/decrementing the value*/
-			input[type=time]::-webkit-inner-spin-button {
-				display: none;
-			}
-
-		</style>
 	</head>
 	<body class="is-preload">
-
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 
@@ -107,7 +32,7 @@
 							</div>
 						</div>
 						<nav>
-							<ul>
+							<ul class="mainMenu">
 								<li><a href="#account">Account</a></li>
 								<li><a href="#market">Market</a></li>
 								<li><a href="#target">Target</a></li>
@@ -326,9 +251,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/ajaxUtil.js"></script>
 	<script>
+
+
+		function getClikedList(menu) {
+
+			console.log(menu);
+			let pno = 1;
+			ajaxService.getAjax("http://localhost:8080/getTargetList",pno,success)
+			function success(data) {
+				console.log(data);
+			}
+
+		}
+
+
 		$(document).ready(()=>{
 			const $buttonSet = $(".button-set button")
+			const $mainMenu = $(".mainMenu li")
 
             //Register 메뉴 버튼 이벤트, 버튼에 맞는 div 표시와 선택된 버튼 색상 변경
 			$buttonSet.on('click', e => {
@@ -336,6 +277,17 @@
 				const targetId = $(e.target).css({"background-color": "white", "color": "black","font-weight" :"bold"}).attr("target-id")
                 $(".fields").each( (index, item) => item.style.display = item.getAttribute("id") === targetId ? "flex": "none")
 			})
+
+			// 메인화면에서 메뉴 클릭시 해당하는 데이터 불러오기
+			$mainMenu.on("click",menu =>{
+				let pno = 1;
+				ajaxService.getAjax("https://swapi.co/api/people/",pno,success)
+				function success(data) {
+					console.log(data);
+				}
+			})
+
+
 		})
 	</script>
 
